@@ -21,7 +21,7 @@
 body {
 	width: 100%;
 	height: 100%;
-	background: #030303;
+	background: #030303f3;
 }
 .container {
 	width: 100%;
@@ -54,7 +54,7 @@ body {
 }
 .blures-2 {
 	position: absolute;
-	background: #ffffffaf;
+	background: #ffffffb9;
 	width: 3%;
 	top: 0.5%;
 	right: 10%;
@@ -63,17 +63,17 @@ body {
 }
 .blures-3 {
 	position: absolute;
-	background: #812202a2;
-	width: 60%;
-	left: -10%;
+	background: #b13a12b7;
+	width: 50%;
+	left: -5%;
 	transform: rotate(15deg);
-	top: -3%;
+	top: 4%;
 	aspect-ratio: 1;
 	clip-path: polygon(80% 48%, 82% 9%, 95% 1%, 95% 35%, 69% 82%, 15% 95%, 15% 84%, 50% 76%);
 }
 .blures-4 {
 	position: absolute;
-	background: #6318013b;
+	background: #9e26023b;
 	width: 35%;
 	top: 5%;
 	left: 42%;
@@ -81,7 +81,7 @@ body {
 }
 .blures-5 {
 	position: absolute;
-	background: #ffffff31;
+	background: #c9c9c931;
 	width: 35%;
 	top: 14%;
 	right:20%;
@@ -94,8 +94,8 @@ body {
 	width: 100%;
 	height: 100%;
 	padding: 1vw;
-	background: hsla(0, 0%, 17%, 0);
-	backdrop-filter: blur(42px);
+	background: hsla(0, 0%, 0%, 0);
+	backdrop-filter: blur(46px);
 	z-index: 3;
 }
 .cont {
