@@ -46,48 +46,47 @@ body {
 }
 .blures-1 {
 	position: absolute;
-	background: hsla(0, 0%, 100%, 0.925);
+	background: hsl(0, 0%, 100%);
 	width: 3.2%;
-	top: 2%;
-	left: 7%;
+	top: 0.5%;
+	left: 10%;
 	aspect-ratio: 1/7;
 }
 .blures-2 {
 	position: absolute;
-	background: #ffffff8f;
-	width: 2%;
-	top: 2%;
-	right: 17%;
-	aspect-ratio: 1/26;
-	transform: rotate(5deg);
+	background: #ffffffaf;
+	width: 3%;
+	top: 0.5%;
+	right: 10%;
+	aspect-ratio: 1/16;
 
 }
 .blures-3 {
 	position: absolute;
-	background: #81220269;
+	background: #812202a2;
 	width: 60%;
-	left: -14%;
+	left: -10%;
 	transform: rotate(15deg);
-	top: 2.5%;
+	top: -3%;
 	aspect-ratio: 1;
 	clip-path: polygon(80% 48%, 82% 9%, 95% 1%, 95% 35%, 69% 82%, 15% 95%, 15% 84%, 50% 76%);
 }
 .blures-4 {
 	position: absolute;
-	background: #38150a3b;
-	width: 55%;
+	background: #6318013b;
+	width: 35%;
 	top: 5%;
-	left: 12%;
+	left: 42%;
 	aspect-ratio: 1;
 }
 .blures-5 {
 	position: absolute;
-	background: #ffffff27;
+	background: #ffffff31;
 	width: 35%;
-	top: 0%;
-	right:16%;
+	top: 14%;
+	right:20%;
 	aspect-ratio: 1;
-	transform: rotate(-260deg);
+	transform: rotate(0deg);
 	clip-path: polygon(86% 56%, 69% 74%, 50% 89%, 36% 98%, 15% 85%, 40% 76%, 67% 57%, 78% 27%);
 }
 .wrapper {
@@ -95,8 +94,8 @@ body {
 	width: 100%;
 	height: 100%;
 	padding: 1vw;
-	background: hsla(0, 0%, 17%, 0.039);
-	backdrop-filter: blur(40px);
+	background: hsla(0, 0%, 17%, 0);
+	backdrop-filter: blur(42px);
 	z-index: 3;
 }
 .cont {
