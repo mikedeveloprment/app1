@@ -11,7 +11,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 				<span className="blures-2"></span>
 				<span className="blures-3"></span>
 				<span className="blures-4"></span>
-				<span className="blures-5"></span>
 			</div>
 		</div>
 		<div className="wrapper">
