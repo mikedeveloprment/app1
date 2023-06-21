@@ -10,9 +10,36 @@ header {
 .logo {
 	font-size: 32px;
 	font-weight: 700;
-	@media (max-Height: 700px) {
+	@media (max-height: 700px) {
 		font-size: 29px;
-	
+	}
+	margin-right: calc(12px + 1vw);
+	display: flex;
+	& .letter {
+		display: block;
+		opacity: 0;
+		animation: textAnimation 2s cubic-bezier(0.5, -0.29, 0.41, 1.61) forwards;
+		transform: translateY(-60%) translateX(-12px) rotate(-35deg) scale(0);
+	}
+	@keyframes textAnimation {
+
+		45% {
+			opacity: 1;
+			transform: translateY(0) translateX(0) rotate(0) scale(1);
+		}
+		50% {
+			opacity: 1;
+			transform: translateY(0) translateX(0) rotate(0) scale(1);
+		}
+		55% {
+			opacity: 1;
+			transform: translateY(0) translateX(0) rotate(0) scale(1);
+			text-shadow: 0px 0px 25px #fdfdfb67;
+		}
+		100% {
+			opacity: 1;
+			transform: translateY(0) translateX(0) rotate(0) scale(1);
+		}
 	}
 }
 
@@ -25,8 +52,8 @@ header {
 	justify-content: center;
 	align-items: center;
 	position: relative;
-	transition: 0.5s cubic-bezier(.65,-0.4,.32,1.36) 0.15s;
-
+	transition: 0.5s cubic-bezier(0.65, -0.4, 0.32, 1.36) 0s;
+	will-change: width;
 	& .nav {
 		position: absolute;
 		top: 0;
@@ -36,12 +63,12 @@ header {
 		background: #29282656;
 		z-index: -1;
 		border-radius: 12px;
-	transition: 0.5s cubic-bezier(.65,-0.4,.32,1.36) 0s;
-}
+		transition: 0.5s cubic-bezier(0.65, -0.4, 0.32, 1.36) 0.15s;
+		will-change: height;
+	}
 	& .navActive {
-		height: 500%;
-		transition: 0.5s cubic-bezier(.65,-0.4,.32,1.36) 0.45s;
-
+		height: 400%;
+		transition: 0.5s cubic-bezier(0.65, -0.4, 0.32, 1.36) 0.3s;
 	}
 	& .iconContainer {
 		height: 44%;
@@ -59,6 +86,7 @@ header {
 			display: block;
 			transform: scale(1);
 			transition: 0.15s ease-in;
+			will-change: transform;
 		}
 		& .circleActive {
 			transform: scale(0);
@@ -67,6 +95,5 @@ header {
 }
 .menuActive {
 	aspect-ratio: 5/1;
-	transition: 0.5s cubic-bezier(.65,-0.4,.32,1.36) 0.3s;
-
+	transition: 0.5s cubic-bezier(0.65, -0.4, 0.32, 1.36) 0.45s;
 }
