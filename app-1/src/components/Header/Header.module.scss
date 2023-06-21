@@ -1,8 +1,8 @@
 header {
 	width: 100%;
-	height: 6.8%;
+	height: 6.5%;
 	min-height: 44px;
-	max-height: 52px;
+	max-height: 54px;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -10,16 +10,39 @@ header {
 .logo {
 	font-size: 32px;
 	font-weight: 700;
+	@media (max-Height: 700px) {
+		font-size: 29px;
+	
+	}
 }
+
 .menu {
 	height: 100%;
 	aspect-ratio: 1.8/1;
-	background: #29282656;
-	border-radius: 12px;
+	background: transparent;
 	backdrop-filter: (2px);
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: relative;
+	transition: 0.5s cubic-bezier(.65,-0.4,.32,1.36) 0.15s;
+
+	& .nav {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		background: #29282656;
+		z-index: -1;
+		border-radius: 12px;
+	transition: 0.5s cubic-bezier(.65,-0.4,.32,1.36) 0s;
+}
+	& .navActive {
+		height: 500%;
+		transition: 0.5s cubic-bezier(.65,-0.4,.32,1.36) 0.45s;
+
+	}
 	& .iconContainer {
 		height: 44%;
 		display: flex;
@@ -34,6 +57,16 @@ header {
 			background: #fdfdfb;
 			border-radius: 10px;
 			display: block;
+			transform: scale(1);
+			transition: 0.15s ease-in;
+		}
+		& .circleActive {
+			transform: scale(0);
 		}
 	}
+}
+.menuActive {
+	aspect-ratio: 5/1;
+	transition: 0.5s cubic-bezier(.65,-0.4,.32,1.36) 0.3s;
+
 }
