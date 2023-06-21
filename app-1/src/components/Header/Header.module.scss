@@ -18,24 +18,24 @@ header {
 	& .letter {
 		display: block;
 		opacity: 0;
-		animation: textAnimation 2s cubic-bezier(0.5, -0.29, 0.41, 1.61) forwards;
-		transform: translateY(-60%) translateX(-12px) rotate(-35deg) scale(0);
+		animation: textAnimation 3.2s ease forwards;
+		transform: translateY(-70%) translateX(-14px) rotate(-45deg) scale(0);
 	}
 	@keyframes textAnimation {
+		25% {
+			opacity: 1;
+			transform: translateY(0) translateX(0) rotate(0) scale(1);
+		}
+		66% {
+			opacity: 1;
+			transform: translateY(0) translateX(0) rotate(0) scale(1);
+		}
+		70% {
+			opacity: 1;
+			transform: translateY(0) translateX(0) rotate(0) scale(1);
+			text-shadow: 0px 0px 28px #ffffff46;
+		}
 
-		45% {
-			opacity: 1;
-			transform: translateY(0) translateX(0) rotate(0) scale(1);
-		}
-		50% {
-			opacity: 1;
-			transform: translateY(0) translateX(0) rotate(0) scale(1);
-		}
-		55% {
-			opacity: 1;
-			transform: translateY(0) translateX(0) rotate(0) scale(1);
-			text-shadow: 0px 0px 25px #fdfdfb67;
-		}
 		100% {
 			opacity: 1;
 			transform: translateY(0) translateX(0) rotate(0) scale(1);
