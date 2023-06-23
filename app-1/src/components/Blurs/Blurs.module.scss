@@ -1,0 +1,56 @@
+.wrapperBlures {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+}
+.contBlures {
+	max-width: 440px;
+	height: 100%;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+.blures1 {
+	position: absolute;
+	background: hsl(0, 0%, 100%);
+	width: 3.2%;
+	top: 0.5%;
+	left: 14%;
+	aspect-ratio: 1/7;
+}
+.blures2 {
+	position: absolute;
+	background: #ffffffb9;
+	width: 2.6%;
+	top: 1%;
+	right: 13%;
+	aspect-ratio: 1/16;
+}
+.blures3 {
+	position: absolute;
+	background: #b13a128a;
+	width: 60%;
+	left: 2%;
+	top: -2%;
+	aspect-ratio: 1;
+	transform: rotate(11deg);
+	clip-path: polygon(
+		80% 48%,
+		82% 9%,
+		95% 1%,
+		95% 35%,
+		69% 82%,
+		15% 95%,
+		15% 84%,
+		50% 76%
+	);
+}
+.blures4 {
+	position: absolute;
+	background: #57200f3b;
+	width: 35%;
+	top: 10%;
+	left: 42%;
+	aspect-ratio: 1;
+}
