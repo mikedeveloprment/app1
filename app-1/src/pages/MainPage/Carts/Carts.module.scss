@@ -1,0 +1,15 @@
+.cartsContainer {
+  height: 100%;
+display: flex;
+flex-direction: column;
+
+}
+
+
+.cartControll {
+  width: 100%;
+  aspect-ratio: 2/1;
+  background: #2f2d2b5d;
+  backdrop-filter: blur(14px);
+  transition: 0.5s cubic-bezier(0.65, -0.4, 0.32, 1.36) 0.15s;
+}
