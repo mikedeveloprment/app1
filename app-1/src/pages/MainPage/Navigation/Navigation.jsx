@@ -10,17 +10,19 @@ const Navigation = () => {
 		"0",
 		`${100 / (listRef.current.offsetWidth || 416) *63*0.2/2}`,
 	]);
-  console.log();
-  console.log(metres);
 	const array = ["Kitchen", "Bathroom", "Living room", "Bedroom"];
 	const itemFunction = (event, index) => {
-		setActiveLink(index);
-		setmetres([
-			`${event.target.offsetWidth}`,
-			`${(100 / listRef.current.offsetWidth) * event.target.offsetLeft}`,
-			((100 / listRef.current.offsetWidth) * event.target.offsetWidth * 0.2) /
-				2,
-		]);
+		if (activeLink !== index) {
+			setActiveLink(index);
+			setmetres([
+				`${event.target.offsetWidth}`,
+				`${(100 / listRef.current.offsetWidth) * event.target.offsetLeft}`,
+				((100 / listRef.current.offsetWidth) * event.target.offsetWidth * 0.2) /
+					2,
+			]);
+			console.log(event.target.offsetLeft);
+		}
+
 	};
 	return (
 		<nav className={clas.navigation}>

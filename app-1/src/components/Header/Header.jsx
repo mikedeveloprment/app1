@@ -5,14 +5,19 @@ const Header = () => {
 	const [menuActiveClass, setMenuActiveClass] = React.useState(true);
 	const word = "Host";
 	const textArray = word.split("");
-	console.log(textArray);
 	return (
 		<header className={clas.header}>
 			<div className={clas.logo}>
 				{textArray.map((letter, index) => (
-					<span key={index} style={{
-            animationDelay: `${index*0.1}s`
-          }} className={clas.letter}>{letter}</span>
+					<span
+						key={index}
+						style={{
+							animationDelay: `${index * 0.1}s`,
+						}}
+						className={clas.letter}
+					>
+						{letter}
+					</span>
 				))}
 			</div>
 			<button

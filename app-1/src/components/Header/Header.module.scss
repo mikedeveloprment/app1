@@ -7,6 +7,7 @@ header {
 	justify-content: space-between;
 	align-items: center;
 	margin-bottom: 60px;
+	z-index: 6;
 }
 .logo {
 	font-size: 32px;
@@ -48,28 +49,34 @@ header {
 	height: 100%;
 	aspect-ratio: 1.8/1;
 	background: transparent;
-	backdrop-filter: (2px);
+z-index: 6;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	position: relative;
 	transition: 0.5s cubic-bezier(0.65, -0.4, 0.32, 1.36) 0s;
 	will-change: width;
-	z-index: 5;
+
 	& .nav {
 		position: absolute;
 		top: 0;
 		right: 0;
 		width: 100%;
 		height: 100%;
-		background: #29282656;
+		background: #2928265b;
+		backdrop-filter: blur(8px);
 		border-radius: 12px;
-		transition: 0.5s cubic-bezier(0.65, -0.4, 0.32, 1.36) 0.15s;
+		transition: 0.5s cubic-bezier(
+			0.65, -0.4, 0.32, 1.36) 0.15s;
 		will-change: height;
+		z-index: 7;
+
 	}
 	& .navActive {
-		height: 400%;
-		background: #ff6f41;
+		right: calc(-12px - 1vw);
+		top: calc(-12px - 1vw);
+		height: 500%;
+		border-radius: 0px 0px 12px 12px;
 		transition: 0.5s cubic-bezier(0.65, -0.4, 0.32, 1.36) 0.3s;
 	}
 	& .iconContainer {
@@ -80,7 +87,8 @@ header {
 		justify-content: center;
 		flex-wrap: wrap;
 		gap: 12%;
-		z-index: 6;
+		z-index: 8;
+
 		& .circle {
 			height: 44%;
 			aspect-ratio: 1;
@@ -97,6 +105,6 @@ header {
 	}
 }
 .menuActive {
-	aspect-ratio: 5/1;
+	aspect-ratio: 6/1;
 	transition: 0.5s cubic-bezier(0.65, -0.4, 0.32, 1.36) 0.45s;
 }

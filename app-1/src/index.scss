@@ -2,6 +2,7 @@
 	margin: 0px;
 	padding: 0;
 	box-sizing: border-box;
+
 }
 
 :root {
@@ -10,12 +11,6 @@
 	font-weight: 400;
 	color: #fff;
 	font-family: "Montserrat";
-
-	font-synthesis: none;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-	-webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -30,24 +25,37 @@ body {
 	z-index: 1;
 	overflow: hidden;
 }
-
 .wrapper {
 	position: relative;
 	width: 100%;
 	height: 100%;
-	padding: 1vw;
 	background: rgba(0, 0, 0, 0.014);
 	backdrop-filter: blur(46px);
 	z-index: 2;
 }
 .cont {
-	max-width: 440px;
-	margin: 0 auto;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 1vw;
+	height: 100%;
+	z-index: 3;
+}
+.cont2 {
 	height: 100%;
 	padding: 12px;
+	max-width: 440px;
+	margin: 0 auto;
 }
-button {
+button,a {
 	border: none;
 	color: #fff;
 	font-family: "Montserrat";
+	@media (any-hover: hover) {
+		cursor: pointer;
+	}
+	@media (any-hover: none) {
+		cursor: default;
+	}
 }

@@ -10,8 +10,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 	<BrowserRouter>
 		<div className="container">
 			<Blurs />
-			<div className="wrapper">
-				<div className="cont">
+			<div className="wrapper"></div>
+			<div className="cont">
+				<div className="cont2">
 					<Header />
 					<MainPage />
 				</div>
