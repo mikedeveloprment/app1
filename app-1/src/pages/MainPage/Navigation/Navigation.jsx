@@ -4,25 +4,26 @@ import { Link } from "react-router-dom";
 
 const Navigation = () => {
 	const listRef = React.useRef(0);
-	const [activeLink, setActiveLink] = React.useState(0);
+	const [activeLink, setActiveLink] = React.useState([0, 0]);
 	const [metres, setmetres] = React.useState([
 		`63`,
 		"0",
-		`${100 / (listRef.current.offsetWidth || 416) *63*0.2/2}`,
+		`${
+			(100 / (listRef.current.offsetWidth || 416)) *
+				 63 * 0.1
+		}`,
 	]);
 	const array = ["Kitchen", "Bathroom", "Living room", "Bedroom"];
 	const itemFunction = (event, index) => {
-		if (activeLink !== index) {
-			setActiveLink(index);
+		if (activeLink[1] !== index) {
+			setActiveLink([activeLink[1], index]);
 			setmetres([
 				`${event.target.offsetWidth}`,
 				`${(100 / listRef.current.offsetWidth) * event.target.offsetLeft}`,
 				((100 / listRef.current.offsetWidth) * event.target.offsetWidth * 0.2) /
 					2,
 			]);
-			console.log(event.target.offsetLeft);
 		}
-
 	};
 	return (
 		<nav className={clas.navigation}>
@@ -32,7 +33,7 @@ const Navigation = () => {
 						key={index}
 						onClick={(event) => itemFunction(event, index)}
 						className={
-							activeLink === index
+							activeLink[1] === index
 								? `${clas.link} ${clas.linkActive}`
 								: clas.link
 						}
@@ -46,6 +47,11 @@ const Navigation = () => {
 					style={{
 						width: `${metres[0] * 0.8}px`,
 						left: `${+metres[1] + +metres[2]}%`,
+						transitionDuration: `${
+							(activeLink[1] > activeLink[0]
+								? activeLink[1] - activeLink[0]
+								: activeLink[0] - activeLink[1])* 0.2 + 0.25
+						}s`,
 					}}
 				></span>
 
