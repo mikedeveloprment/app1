@@ -7,7 +7,7 @@ const Carts = () => {
 		<div className={clas.cartsContainer}>
 			<SmoothCorners
 				className={clas.cartControll}
-				corners="12, 10"
+				corners="16, 8"
 				borderRadius="20px"
 				as="div"
 			>
