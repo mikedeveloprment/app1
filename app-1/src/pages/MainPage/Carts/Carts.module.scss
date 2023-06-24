@@ -1,6 +1,8 @@
 .cartsContainer {
 	height: 100%;
 	display: flex;
+  width: 96%;
+  margin: 0 auto;
 	flex-direction: column;
 	gap: 5px;
 	min-height: 420px;
@@ -13,10 +15,7 @@
 	backdrop-filter: blur(12px);
 	transition: 0.5s cubic-bezier(0.36, -0.1, 0.3, 2.33);
 	will-change: auto;
-	&:hover {
-		background: #2f2d2b49;
-		backdrop-filter: blur(6px);
-	}
+
 }
 .cartControll {
 	aspect-ratio: 2/1;
