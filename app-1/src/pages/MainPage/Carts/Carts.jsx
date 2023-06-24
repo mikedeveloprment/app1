@@ -1,18 +1,14 @@
 import React from "react";
 import clas from "./Carts.module.scss";
-import { SmoothCorners } from "react-smooth-corners";
+import { motion } from "framer-motion";
 
 const Carts = () => {
 	return (
 		<div className={clas.cartsContainer}>
-			<div
-				className={clas.cartControll}
-				corners="16, 8"
-				borderRadius="20px"
-				as="div"
-			>
+			<motion.div
 
-			</div>
+				className={clas.cartControll}
+			></motion.div>
 		</div>
 	);
 };

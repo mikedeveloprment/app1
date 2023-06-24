@@ -25,6 +25,12 @@ const Navigation = () => {
 			]);
 		}
 	};
+
+	const durationLine = 
+	(activeLink[1] > activeLink[0]
+		? activeLink[1] - activeLink[0]
+		: activeLink[0] - activeLink[1])* 0.2 + 0.25
+
 	return (
 		<nav className={clas.navigation}>
 			<ul className={clas.list} ref={listRef}>
@@ -37,6 +43,9 @@ const Navigation = () => {
 								? `${clas.link} ${clas.linkActive}`
 								: clas.link
 						}
+						style={{
+							transitionDelay: `${durationLine-0.5}s`
+						}}
 					>
 						<Link to="/">{item}</Link>
 					</li>
@@ -47,10 +56,7 @@ const Navigation = () => {
 					style={{
 						width: `${metres[0] * 0.8}px`,
 						left: `${+metres[1] + +metres[2]}%`,
-						transitionDuration: `${
-							(activeLink[1] > activeLink[0]
-								? activeLink[1] - activeLink[0]
-								: activeLink[0] - activeLink[1])* 0.2 + 0.25
+						transitionDuration: `${durationLine
 						}s`,
 					}}
 				></span>
