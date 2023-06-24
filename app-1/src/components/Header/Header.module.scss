@@ -22,6 +22,7 @@ header {
 		opacity: 0;
 		animation: textAnimation 3.2s ease forwards;
 		transform: translateY(-70%) translateX(-14px) rotate(-45deg) scale(0);
+		will-change: transform;
 	}
 	@keyframes textAnimation {
 		25% {
@@ -49,9 +50,9 @@ header {
 	max-width: 70%;
 	height: 100%;
 	aspect-ratio: 1.8/1;
-	flex: 0  10%;
+	flex: 0 10%;
 	background: transparent;
-z-index: 6;
+	z-index: 6;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -68,11 +69,9 @@ z-index: 6;
 		background: #29282656;
 		backdrop-filter: blur(12px);
 		border-radius: 12px;
-		transition: 0.5s cubic-bezier(
-			0.65, -0.4, 0.32, 1.36) 0.15s;
+		transition: 0.5s cubic-bezier(0.65, -0.4, 0.32, 1.36) 0.15s;
 		will-change: height;
 		z-index: 7;
-
 	}
 	& .navActive {
 		height: 300%;
