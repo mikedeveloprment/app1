@@ -1,4 +1,3 @@
-
 .cart {
 	background: #2f2d2b56;
 	border-radius: 16px;
@@ -9,4 +8,41 @@
 .cartControll {
 	aspect-ratio: 2/1;
 	width: 100%;
+	padding: 18px;
+	line-height: 1;
+}
+.infoCont {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.textCard {
+	font-size: 26px;
+	font-weight: 600;
+}
+.checkboks {
+	height: 24px;
+	width: 42px;
+	border-radius: 50px;
+	background: #323232;
+	padding: 2px;
+	transition: 0.4s cubic-bezier(0.65, -0.4, 0.32, 1.36);
+}
+.checkboksActive {
+	background: #ff6f41;
+}
+.circle {
+	display: block;
+	height: 100%;
+	aspect-ratio: 1;
+	background: #fff;
+	border-radius: 50%;
+  transform: scale(1.05) translateX(0);
+	transition: 0.4s cubic-bezier(0.65, -0.4, 0.32, 1.36);
+
+}
+.circleActive {
+  transform: translateX(calc(100% - 2px));
+
 }

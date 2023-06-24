@@ -29,7 +29,7 @@
 		height: 2px;
 		border-radius: 5px;
 		background: #ff7141dc;
-		box-shadow: 0px -6px 16px 0px #ff7141ab;
+		box-shadow: 0px -5px 18px 0px #ff7141ab;
 		will-change: width, left;
 
 	}
@@ -41,7 +41,7 @@
 	align-items: center;
 	font-size: 16px;
 	font-weight: 500;
-	color: #ffffff;
+	color: #88888877;
 	transition: 0.3s cubic-bezier(0.65, -0.4, 0.32, 1.36);
 	white-space: nowrap;
 	&:last-child {
