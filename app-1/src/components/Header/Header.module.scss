@@ -75,7 +75,7 @@ header {
 
 	}
 	& .navActive {
-		height: 320%;
+		height: 150px;
 		transition: 0.5s cubic-bezier(0.65, -0.4, 0.32, 1.36) 0.3s;
 	}
 	& .iconContainer {
@@ -87,6 +87,7 @@ header {
 		flex-wrap: wrap;
 		gap: 12%;
 		z-index: 8;
+		pointer-events: none;
 
 		& .circle {
 			height: 44%;

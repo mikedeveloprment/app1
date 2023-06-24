@@ -5,10 +5,11 @@ import { motion } from "framer-motion";
 const Carts = () => {
 	return (
 		<div className={clas.cartsContainer}>
-			<motion.div
-
-				className={clas.cartControll}
-			></motion.div>
+			<div className={`${clas.cartControll} ${clas.cart}`}></div>
+			<div className={clas.cartsContainer2}>
+				<div className={`${clas.cartsContainer3} ${clas.cart}`}></div>
+				<div className={`${clas.cartControll2} ${clas.cart}`}></div>
+			</div>
 		</div>
 	);
 };

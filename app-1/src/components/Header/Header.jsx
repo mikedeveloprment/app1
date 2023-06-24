@@ -5,6 +5,15 @@ const Header = () => {
 	const [menuActiveClass, setMenuActiveClass] = React.useState(true);
 	const word = "Host";
 	const textArray = word.split("");
+	React.useEffect( ()=> {
+		document.body.addEventListener("click", (e) => {
+
+			if(!e.target.closest(`.${clas.nav}`)) {
+				setMenuActiveClass(true)
+			}
+		});
+	}, [])
+
 	return (
 		<header className={clas.header}>
 			<div className={clas.logo}>
