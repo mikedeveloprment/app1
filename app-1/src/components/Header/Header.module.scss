@@ -72,11 +72,7 @@ header {
 		transition: 0.5s cubic-bezier(0.65, -0.4, 0.32, 1.36) 0.15s;
 		will-change: height;
 		z-index: 7;
-		&:hover {
-			background: #2f2d2b41;
-			backdrop-filter: blur(8px);
-			transform: scale(1.05);
-		}
+
 	}
 	& .navActive {
 		height: 320%;
