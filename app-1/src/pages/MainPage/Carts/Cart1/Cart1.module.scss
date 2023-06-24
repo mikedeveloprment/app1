@@ -1,0 +1,12 @@
+
+.cart {
+	background: #2f2d2b56;
+	border-radius: 16px;
+	backdrop-filter: blur(12px);
+	transition: 0.5s cubic-bezier(0.36, -0.1, 0.3, 2.33);
+	will-change: auto;
+}
+.cartControll {
+	aspect-ratio: 2/1;
+	width: 100%;
+}
