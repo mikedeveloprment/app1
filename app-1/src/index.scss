@@ -23,7 +23,6 @@ body {
 	height: 100vh;
 	position: relative;
 	z-index: 1;
-	overflow-x: hidden;
 	overflow: hidden;
 }
 ::-webkit-scrollbar {
@@ -59,9 +58,9 @@ button,a {
 	color: #fff;
 	font-family: "Montserrat";
 	@media (any-hover: hover) {
-		cursor: pointer;
+		cursor: pointer !important;
 	}
 	@media (any-hover: none) {
-		cursor: default;
+		cursor: default !important;
 	}
 }
