@@ -14,14 +14,7 @@
 	list-style: none;
 	position: relative;
 	z-index: 5;
-	& .trigger {
-		position: absolute;
-		width: 20%;
-		height: 100%;
-		display: none;
-		border-radius: 6px;
-		background: #29282656;
-	}
+
 	& .line {
 		transition-timing-function: cubic-bezier(0.65, -0.4, 0.32, 1.36);
 		position: absolute;

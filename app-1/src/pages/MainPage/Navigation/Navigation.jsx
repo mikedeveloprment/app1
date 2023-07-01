@@ -61,7 +61,6 @@ const Navigation = () => {
 					}}
 				></span>
 
-				<span className={clas.trigger}></span>
 			</ul>
 		</nav>
 	);

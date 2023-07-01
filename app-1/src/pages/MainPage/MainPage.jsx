@@ -5,7 +5,6 @@ import Carts from "./Carts/Carts";
 const MainPage = () => {
 	return (
 		<div style={{
-			height: "100%",
 			width: "100%",
 			display: "flex",
 			flexDirection: "column"
