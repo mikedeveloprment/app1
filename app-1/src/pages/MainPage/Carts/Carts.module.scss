@@ -17,10 +17,11 @@
 .cartsContainer2 {
 	width: 100%;
 	min-height: 300px;
-	flex: 1 60%;
 	justify-content: space-between;
 	display: flex;
 	gap: 5px;
+	aspect-ratio: 1/0.9;
+
 }
 .cartControll2 {
 	flex: 1 25%;
