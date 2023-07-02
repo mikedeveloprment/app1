@@ -10,10 +10,18 @@
 	background: #2f2d2b56;
 	border-radius: 16px;
 	backdrop-filter: blur(12px);
-	transition: 0.5s cubic-bezier(0.36, -0.1, 0.3, 2.33);
+	transform-origin: 0 0;
 	will-change: auto;
+	transform: scale(0) translateX(-100px);
+	opacity: 0;
+	animation: name 0.5s cubic-bezier(0.5, -0.7, 0.3, 1.4) forwards;
 }
-
+@keyframes name {
+	100% {
+		transform: scale(1) translateX(0);
+		opacity: 1;
+	}
+}
 .cartsContainer2 {
 	width: 100%;
 	min-height: 300px;
@@ -21,16 +29,18 @@
 	display: flex;
 	gap: 5px;
 	aspect-ratio: 1/0.9;
-
 }
 .cartControll2 {
 	flex: 1 25%;
 	height: 100%;
 	background: #ff6f41;
+	animation-delay: 0.9s;
 }
 .cartControll3 {
 	flex: 1 25%;
 	height: 100%;
+	animation-delay: 1.05s;
+
 }
 .cartsContainer3 {
 	flex: 1 75%;
@@ -42,4 +52,6 @@
 .cartControll4 {
 	flex: 1 25%;
 	height: 100%;
+	transform-origin: top right;
+	animation-delay: 1.2s;
 }

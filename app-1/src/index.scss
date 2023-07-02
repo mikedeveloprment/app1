@@ -23,7 +23,7 @@ body {
 	height: 100vh;
 	position: relative;
 	z-index: 1;
-	overflow: hidden;
+	overflow-x: hidden;
 }
 ::-webkit-scrollbar {
 	width: 0;

@@ -8,10 +8,7 @@ const Navigation = () => {
 	const [metres, setmetres] = React.useState([
 		`63`,
 		"0",
-		`${
-			(100 / (listRef.current.offsetWidth || 416)) *
-				 63 * 0.1
-		}`,
+		`${(100 / (listRef.current.offsetWidth || 416)) * 63 * 0.1}`,
 	]);
 	const array = ["Kitchen", "Bathroom", "Living room", "Bedroom"];
 	const itemFunction = (event, index) => {
@@ -23,13 +20,16 @@ const Navigation = () => {
 				((100 / listRef.current.offsetWidth) * event.target.offsetWidth * 0.2) /
 					2,
 			]);
+			console.log(event.target.offsetLeft);
 		}
 	};
 
-	const durationLine = 
-	(activeLink[1] > activeLink[0]
-		? activeLink[1] - activeLink[0]
-		: activeLink[0] - activeLink[1])* 0.2 + 0.25
+	const durationLine =
+		(activeLink[1] > activeLink[0]
+			? activeLink[1] - activeLink[0]
+			: activeLink[0] - activeLink[1]) *
+			0.2 +
+		0.25;
 
 	return (
 		<nav className={clas.navigation}>
@@ -44,10 +44,17 @@ const Navigation = () => {
 								: clas.link
 						}
 						style={{
-							transitionDelay: `${durationLine-0.5}s`
+							transitionDelay: `${durationLine - 0.5}s`,
 						}}
 					>
-						<Link to="/">{item}</Link>
+						<Link
+							style={{
+								animationDelay: `${index * 0.1 + 0.4}s`,
+							}}
+							to="/"
+						>
+							{item}
+						</Link>
 					</li>
 				))}
 
@@ -56,11 +63,9 @@ const Navigation = () => {
 					style={{
 						width: `${metres[0] * 0.8}px`,
 						left: `${+metres[1] + +metres[2]}%`,
-						transitionDuration: `${durationLine
-						}s`,
+						transitionDuration: `${durationLine}s`,
 					}}
 				></span>
-
 			</ul>
 		</nav>
 	);
