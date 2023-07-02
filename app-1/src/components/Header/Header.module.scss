@@ -62,8 +62,6 @@ header {
 	transform-origin: top right;
 	transform: scale(0) translateX(-40px);
 	animation: name 0.5s cubic-bezier(0.5, -0.7, 0.3, 1.4) forwards 0.3s;
-	will-change: auto;
-	transition-property: prop;
 	@keyframes name {
 		100% {
 			transform: scale(1) translateX(0);
@@ -116,5 +114,4 @@ header {
 .menuActive {
 	aspect-ratio: 5/1;
 	transition: 0.5s cubic-bezier(0.65, -0.4, 0.32, 1.36) 0.45s;
-	transform: scale(1.01);
 }
