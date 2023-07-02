@@ -46,32 +46,29 @@ header {
 	}
 }
 
-@keyframes name {
-	100% {
-		transform: scale(1) translateX(0);
-		opacity: 1;
-	}
-}
-
 .menu {
 	max-width: 70%;
 	height: 100%;
 	aspect-ratio: 1.8/1;
 	flex: 0 10%;
 	background: transparent;
-	z-index: 6;
+	z-index: 7;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	position: relative;
 	transition: 0.5s cubic-bezier(0.65, -0.4, 0.32, 1.36) 0s;
 	will-change: width;
-	opacity: 0;
 	transform-origin: top right;
-	transform: scale(0) translateX(-100px);
-	animation: name 0.6s cubic-bezier(0.5, -0.7, 0.3, 1.4) forwards 0.25s;
+	transform: scale(0) translateX(-40px);
+	animation: name 0.5s cubic-bezier(0.5, -0.7, 0.3, 1.4) forwards 0.3s;
 	will-change: auto;
 	transition-property: prop;
+	@keyframes name {
+		100% {
+			transform: scale(1) translateX(0);
+		}
+	}
 	& .nav {
 		position: absolute;
 		top: 0;
@@ -84,6 +81,7 @@ header {
 		transition: 0.5s cubic-bezier(0.65, -0.4, 0.32, 1.36) 0.15s;
 		will-change: height;
 		z-index: 7;
+		
 	}
 	& .navActive {
 		height: 300%;
